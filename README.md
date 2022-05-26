@@ -4,10 +4,10 @@ COURSE TIMETABLE SCHEDULER
 with Genetic Algorithm
 May, 2022
 Prepared By
-مولر مجدي نمر
-محمد أحمد طه
-مصطفى أحمد محمد
-أسالم محمد عبدهللا
+1-Mostafa Ahmed
+2-Mohamed Taha
+3-Eslam Zanaty
+4-Mollar Magdy
 
 INTRODUCTION
 In the university, college students must be register for their classes, creating 
