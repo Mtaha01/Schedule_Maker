@@ -9,7 +9,7 @@ Prepared By
 3-Eslam Zanaty
 4-Mollar Magdy
 
-INTRODUCTION
+INTRODUCTION : 
 In the university, college students must be register for their classes, creating 
 timetables for institutes which deal with sections and lectures scheduling is a 
 complex problem. It is difficult and time consuming to solve due to many 
@@ -33,7 +33,7 @@ biggest hurdle to overcome.
 
 
 
-METHODOLOGY
+METHODOLOGY : 
 Genetic algorithms are heuristic methods used to solve computational problems
 which require large search areas for possible solutions. They very often depend 
 on adaptive systems to perform well in changing environments. 
@@ -57,13 +57,12 @@ population.
 4. Producing offspring by mating (cross over) the selected chromosomes.
 5. Mutating genes randomly.
 6. Repeating steps 3-5 until a new population is generated.
-7. Ending the algorithm when the best solution obtained has not changed 
-after a preset number of generations
+7. Ending the algorithm when the best solution obtained has not changed  after a preset number of generations
 
 
 
 
- ADVANTAGES OF GENETIC ALGORITHM
+ADVANTAGES OF GENETIC ALGORITHM : 
 As compared to genetic algorithms, other optimization algorithms look for 
 solutions in a serial manner (in one direction) in the search field at a given time. 
 The disadvantage of a serial search is that if the solution obtained is not 
@@ -75,7 +74,8 @@ of finding a favorable solution in a genetic algorithm is high during each run.
 
 
 
-HOW THE ALGORITHM CAN SOLVE THE SCHEDULE PROBLEM.
+
+HOW THE ALGORITHM CAN SOLVE THE SCHEDULE PROBLEM :
 1. Generate the initial population (The Schedules) with size of 15
 2. Calculate the fitness function for each schedule 
 (Fitness Function = 1 / (1* Number of conflicts + 1))
@@ -99,7 +99,7 @@ C: Number of Classes
 
 
 
-EXPERIMENTAL SIMULATION
+EXPERIMENTAL SIMULATION : 
 Programing language: Python 
 IDE: Visual Studio
 Data needed: 
@@ -126,7 +126,7 @@ It defines the course class with data for it
 6. Class for the Classes
 to include the data of the course, its time, hall, instructor, and department
 
-7. Class for the Schedule
+7. Class for the Schedule :
 It generates the chromosomes, calculates its fitness function for each 
 chromosome by using the number of conflicts
  Fitness function = 1/(1*number of conflicts+1)
@@ -141,7 +141,7 @@ and the same Hall or Room
 number of students for this class
 
 
-8. Class for the Population
+8. Class for the Population : 
 Define the population that includes the schedules(chromosomes) 
 9. Class For the data we want to schedule:
  We create a list for each element in the class table 
@@ -150,7 +150,7 @@ weak that faculty works and all times in the day, all INSTRUCTORS in
 the faculty, all courses and all department related to the courses
 
 
-10. Class for the Genetic Algorithm
+10. Class for the Genetic Algorithm : 
  The evolve function perform the algorithm
  The crossover_Population function performs:
  Select elite schedules
@@ -162,14 +162,14 @@ crossover)
  The mutate_population looping on the schedules and call the mutate_sechule 
 function for it that perform the mutation between the classes inside the 
 schedule 
-11. Class for the display manager 
+11. Class for the display manager :
 It is used to help displaying the tables of the schedules using library pretty 
 Table
  
 
 
 
-RESULTS AND TECHNICAL DISCUSSION
+RESULTS AND TECHNICAL DISCUSSION :
 The hard constraints were tested to ensure that all the solutions obtained were
 valid. The optimized solution for the timetable consisted of the following factors 
 and their values. The population size was 15 with a mutation rate of 0.1, the 
@@ -190,7 +190,7 @@ it.
 
 
 
-CONCLUSION
+CONCLUSION : 
 The course scheduler using genetic algorithms finds the best solution that satisfies 
 a number of hard constraints. Also, the mutation technique used guarantees that
 the mutated chromosomes remain valid. This was done by creating a known valid 
@@ -202,7 +202,7 @@ scheduler.
 
 
 
-REFERENCES
+REFERENCES : 
 https://link.springer.com/article/10.1007/s11042-020-10139-6
 https://towardsdatascience.com/using-genetic-algorithms-to-scheduletimetables-27f132c9e280
 https://andreweast.net/wp-content/uploads/2019/06/Timetable-Scheduling-viaGenetic-Algorithm-Andrew-Reid-East.pdf
