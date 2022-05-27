@@ -1,15 +1,11 @@
-﻿# Schedule_Maker
+# Timetabling-Schedule-System
 
-COURSE TIMETABLE SCHEDULER
-with Genetic Algorithm
-May, 2022
-Prepared By
-1-Mostafa Ahmed
-2-Mohamed Taha
-3-Eslam Zanaty
-4-Mollar Magdy
+Genetic Algorithm For University Course Timetabling Problem 💻⌚🏫
 
-INTRODUCTION : 
+
+
+## INTRODUCTION and why we made this project
+
 In the university, college students must be register for their classes, creating 
 timetables for institutes which deal with sections and lectures scheduling is a 
 complex problem. It is difficult and time consuming to solve due to many 
@@ -29,11 +25,17 @@ Therefore, the requirement of specific coding as per respective universities is 
 biggest hurdle to overcome.
 
 
+## Abstraction:
+The course scheduler using genetic algorithms finds the best solution that satisfies 
+a number of hard constraints. Also, the mutation technique used guarantees that
+the mutated chromosomes remain valid. This was done by creating a known valid 
+random individual, swapping genes with it similar to uniform crossover. Use of 
+uniform crossover and tournament selection completed the algorithm. Also, the 
+effect of mutation rate and the population size were studied for the course 
+scheduler.
 
 
-
-
-METHODOLOGY : 
+## METHODOLOGY 
 Genetic algorithms are heuristic methods used to solve computational problems
 which require large search areas for possible solutions. They very often depend 
 on adaptive systems to perform well in changing environments. 
@@ -60,22 +62,7 @@ population.
 7. Ending the algorithm when the best solution obtained has not changed  after a preset number of generations
 
 
-
-
-ADVANTAGES OF GENETIC ALGORITHM : 
-As compared to genetic algorithms, other optimization algorithms look for 
-solutions in a serial manner (in one direction) in the search field at a given time. 
-The disadvantage of a serial search is that if the solution obtained is not 
-favorable, the work carried out thus far has to be abandoned and a new search 
-must be started. Genetic algorithms, which have multiple offspring on the other 
-hand, are able to look for solutions in many directions at a given time, 
-abandoning the paths which lead to suboptimal solutions. Thus, the opportunity
-of finding a favorable solution in a genetic algorithm is high during each run.
-
-
-
-
-HOW THE ALGORITHM CAN SOLVE THE SCHEDULE PROBLEM :
+## HOW THE ALGORITHM CAN SOLVE THE SCHEDULE PROBLEM :
 1. Generate the initial population (The Schedules) with size of 15
 2. Calculate the fitness function for each schedule 
 (Fitness Function = 1 / (1* Number of conflicts + 1))
@@ -96,80 +83,7 @@ C: Number of Classes
  
 
 
-
-
-
-EXPERIMENTAL SIMULATION : 
-Programing language: Python 
-IDE: Visual Studio
-Data needed: 
- Days available for the faculty
- Meeting hours available
- Halls or Rooms available for the classes and the capacity of it 
- Instructors that will teach the courses
- The courses data with instructor data and number of students
- The departments and the courses that it belongs to 
-Note: if we have a course included in more than one department then we 
-will create a virtual department to include this course
-We are using OOP in python to organize the code as much as we can
-Implementation of the Classes
-1. Class for the days
-It defines the available days for the faculty or university
-2. Class for the Meeting Times
-It defines the available Meeting hours for the faculty
-3. Class for the Instructors
-It defines the instructors data (name and id )
-4. Class for the Halls and Rooms
-It Defines the Capacity of it and the name of it
-5. Class for the Course
-It defines the course class with data for it
-6. Class for the Classes
-to include the data of the course, its time, hall, instructor, and department
-
-7. Class for the Schedule :
-It generates the chromosomes, calculates its fitness function for each 
-chromosome by using the number of conflicts
- Fitness function = 1/(1*number of conflicts+1)
- Number of conflicts is increased when:
- When two classes have the same meeting time, the same day, 
-the same department, same grade, and they are not both a lab 
- When two classes have the same meeting time, the same day, 
-and the same instructor
- When two classes have the same meeting time, the same day,
-and the same Hall or Room
- When the capacity of the hall or the room is less than the max 
-number of students for this class
-
-
-8. Class for the Population : 
-Define the population that includes the schedules(chromosomes) 
-9. Class For the data we want to schedule:
- We create a list for each element in the class table 
- The lists consists of :all the halls and labs in faculty , all the days of 
-weak that faculty works and all times in the day, all INSTRUCTORS in 
-the faculty, all courses and all department related to the courses
-
-
-10. Class for the Genetic Algorithm : 
- The evolve function perform the algorithm
- The crossover_Population function performs:
- Select elite schedules
- Selecting the two schedules by using the 
-select_tournament_population (using random selection)
- selection of the chromosomes (schedules) to cross over 
-between them in the crossover_schedule function (uniform 
-crossover) 
- The mutate_population looping on the schedules and call the mutate_sechule 
-function for it that perform the mutation between the classes inside the 
-schedule 
-11. Class for the display manager :
-It is used to help displaying the tables of the schedules using library pretty 
-Table
- 
-
-
-
-RESULTS AND TECHNICAL DISCUSSION :
+## RESULTS AND TECHNICAL DISCUSSION :
 The hard constraints were tested to ensure that all the solutions obtained were
 valid. The optimized solution for the timetable consisted of the following factors 
 and their values. The population size was 15 with a mutation rate of 0.1, the 
@@ -178,34 +92,33 @@ values the resulting timetable had zero number of conflicts with the fitness val
 of 1.
 
 
-The output:
-Print by two methods (Console, File)
+## The output:
+**Print by two methods (Console, File)**
 For ex: Data:
- Frist we print all generation untill reach to the goal.
- In this test we reach to the goal after 80 generation.
- We take the best solution(the Schedule that has fitness (1)) and print 
+- Frist we print all generation untill reach to the goal.
+- In this test we reach to the goal after 80 generation.
+- We take the best solution(the Schedule that has fitness (1)) and print 
 it.
- We split it by grade and sort it by week days.
+- We split it by grade and sort it by week days.
+
+
+
+## Prepared By
+- Mostafa Ahmed
+- Mohamed Taha
+- Eslam Zanaty
+- Mollar Magdy
 
 
 
 
-CONCLUSION : 
-The course scheduler using genetic algorithms finds the best solution that satisfies 
-a number of hard constraints. Also, the mutation technique used guarantees that
-the mutated chromosomes remain valid. This was done by creating a known valid 
-random individual, swapping genes with it similar to uniform crossover. Use of 
-uniform crossover and tournament selection completed the algorithm. Also, the 
-effect of mutation rate and the population size were studied for the course 
-scheduler.
 
 
 
-
-REFERENCES : 
-https://link.springer.com/article/10.1007/s11042-020-10139-6
-https://towardsdatascience.com/using-genetic-algorithms-to-scheduletimetables-27f132c9e280
-https://andreweast.net/wp-content/uploads/2019/06/Timetable-Scheduling-viaGenetic-Algorithm-Andrew-Reid-East.pdf
-https://en.wikipedia.org/wiki/Genetic_algorithm
-https://prototypeprj.blogspot.com/2020/07/class-scheduling-w-geneticalgorithms.html
+## REFERENCES : 
+- https://link.springer.com/article/10.1007/s11042-020-10139-6
+- https://towardsdatascience.com/using-genetic-algorithms-to-schedule-timetables-27f132c9e280
+- https://andreweast.net/wp-content/uploads/2019/06/Timetable-Scheduling-via-Genetic-Algorithm-Andrew-Reid-East.pdf
+- https://en.wikipedia.org/wiki/Genetic_algorithm
+- https://prototypeprj.blogspot.com/2020/07/class-scheduling-w-genetic-algorithms.html
 
